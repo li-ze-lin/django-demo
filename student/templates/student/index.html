@@ -1,0 +1,22 @@
+
+
+
+
+    <table border="1px">
+            <tr>
+                    <th>ID</th>
+                    <th>名字</th>
+                    <th>年级</th>
+                    <th>操作/<a href="{% url 'student:to_add' %}">添加</a></th>
+            </tr>
+    {% for student_one in student_list %}
+        <tr>
+                <td>{{ student_one.id }}</td>
+                <td>{{ student_one.name }}</td>
+                <td>{{ student_one.grade }}</td>
+                <td>
+                        <a href="{% url 'student:delete' student_one.id %}">删除</a>
+                </td>
+        </tr>
+    {% endfor %}
+    </table>

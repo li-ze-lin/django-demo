@@ -1,0 +1,9 @@
+<form action="{% url 'student:add' %}" method="post">
+{% csrf_token %}
+    姓名:<input type="text" name='name' ><br>
+    年级:<input type="text" name='grade' ><br>
+    <input type="submit" value="添加">
+</form>
+
+<hr>
+<a href="{% url 'student:index' %}">返回首页</a>
